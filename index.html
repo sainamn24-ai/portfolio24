@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saina M N | Professional Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f6f8;
+  color:#333;
+  line-height:1.8;
+  font-size:18px;
+}
+section{padding:50px 0}
+.container{width:90%;max-width:1100px;margin:auto}
+
+h1{font-size:3.2rem}
+h2{font-size:2.4rem;margin-bottom:25px}
+h3{font-size:1.4rem}
+p{font-size:1.1rem}
+
+/* NAV */
+header{
+  background:#fff;
+  padding:15px 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 15px rgba(0,0,0,.1)
+}
+nav{display:flex;justify-content:space-between;align-items:center}
+.nav-links{list-style:none;display:flex;gap:18px}
+.nav-links a{text-decoration:none;color:#333;font-weight:600}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.1)
+}
+/* Name highlight */
+.name-highlight{
+  color:#2563eb;   /* Blue color */
+}
+
+/* Subtitle bold & clean */
+.subtitle{
+  font-weight:700;
+  font-size:1.2rem;
+  color:#333;
+}
+
+
+
+/* HOME SECTION 50/50 LAYOUT */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal width */
+  gap: 0;
+  align-items: center;
+}
+
+.home-content {
+  padding-right: 40px;
+}
+
+.home-photo {
+  text-align: center;
+}
+
+.home-photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+
+
+
+/* ===== ABOUT SECTION STYLING ===== */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.about-card {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.about-card p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #374151;
+}
+
+.about-card .highlight {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.about-footer {
+  font-weight: 600;
+  color: #111827;
+}
+/* CV BUTTON */
+.about-actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+
+/* SKILLS */
+.skill{margin-bottom:20px}
+.skill p{font-weight:600;margin-bottom:6px}
+.bar{
+  background:#e5e7eb;
+  border-radius:30px;
+  overflow:hidden;
+  max-width:850px;
+  height:18px
+}
+.bar span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,#2563eb,#3b82f6);
+  color:#fff;
+  font-weight:bold;
+  text-align:right;
+  padding-right:10px;
+  font-size:.9rem
+}
+
+/* EDUCATION */
+.education-list{display:flex;flex-direction:column;gap:20px}
+.education-item{
+  display:flex;
+  gap:20px;
+  background:#fff;
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,.08)
+}
+.edu-left{
+  min-width:110px;
+  font-weight:bold;
+  color:#2563eb;
+  text-align:center
+}
+
+/* WORK */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+  gap:30px
+}
+.gallery img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.25)
+}
+
+/* PRESENTATION */
+video{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.3)
+}
+
+/* CONTACT */
+.contact-card{display:grid;gap:20px}
+.contact-item{display:flex;gap:15px;align-items:center}
+.icon{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#eef2ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem
+}
+.contact-social{display:flex;gap:15px}
+.social{
+  padding:10px 22px;
+  border-radius:25px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600
+}
+.whatsapp{background:#22c55e}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#fff;
+  margin-top:40px
+}/* ===== FOOTER STYLING ===== */
+.footer {
+  background: #1f2937;  /* dark gray */
+  color: #e5e7eb;
+  padding: 35px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.footer-content .name-highlight {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+
+
+
+
+/* DARK MODE FOOTER */
+body.dark .footer {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <h3>Saina M N</h3>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="container">
+  <div>
+    <section id="home" class="container home-grid">
+  <div class="home-content">
+    <h1>Hello,I’m <span class="name-highlight">Saina </span></h1>
+    <p class="subtitle"><strong>Accounting | Excel | Tally Professional</strong></p>
+    <p class="home-about">
+      I am a detail-oriented accounting professional with strong practical
+      knowledge in Advanced Excel and Tally Prime, focusing on payroll,
+      reporting, and accurate data handling.
+    </p>
+    
+  </div>
+  <div class="home-photo">
+    <img src="images/myphoto.jpg" alt="My Photo">
+  </div>
+</section>
+
+   
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-card">
+      <p>
+        I am a motivated and detail-oriented accounting professional with a strong
+        academic background and practical exposure in accounting, data analysis,
+        and financial reporting.
+      </p>
+
+      <p>
+        I have completed professional training in
+        <span class="highlight">Advanced Excel</span> and
+        <span class="highlight">Tally Prime (Gold)</span>,
+        where I gained hands-on experience in payroll processing, GST basics,
+        voucher entries, ledger maintenance, and report generation.
+      </p>
+
+      <p>
+        I am confident in handling real-time accounting tasks, preparing accurate
+        financial reports, and supporting business decisions through organized
+        and reliable data.
+      </p>
+
+      <p>
+        I enjoy working with numbers, learning new accounting tools, and continuously
+        improving my technical and professional skills.
+      </p>
+
+      <p class="about-footer">
+        I am eager to grow within a professional organization where I can contribute
+        effectively while expanding my knowledge and experience.
+      </p>
+    </div>
+  </div>
+ <div class="about-actions">
+  <a href="CV_2026011015184470.pdf" target="_blank" class="btn-cv">
+    📄 <span>View CV</span>
+  </a>
+</div>
+
+  
+
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="skill"><p>Advanced Excel</p><div class="bar"><span style="width:90%">90%</span></div></div>
+    <div class="skill"><p>Tally Prime (Gold)</p><div class="bar"><span style="width:85%">85%</span></div></div>
+    <div class="skill"><p>Payroll Processing</p><div class="bar"><span style="width:80%">80%</span></div></div>
+    <div class="skill"><p>Accounting & GST Basics</p><div class="bar"><span style="width:75%">75%</span></div></div>
+    <div class="skill"><p>HTML & CSS</p><div class="bar"><span style="width:70%">70%</span></div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="education-list">
+      <div class="education-item">
+        <div class="edu-left">2025–2026</div>
+        <div><h3>Advanced Excel</h3><p>G-TEC Computer Education</p></div>
+      </div>
+      <div class="education-item">
+        <div class="edu-left">A+</div>
+        <div><h3>Tally Essential & Comprehensive</h3><p>G-TEC Computer Education</p></div>
+      </div>
+      <div class="education-item">
+        <div class="edu-left">2019–2022</div>
+        <div><h3>B.Sc Mathematics</h3><p>University Degree</p></div>
+      </div>
+      <div class="education-item">
+        <div class="edu-left">80%</div>
+        <div><h3>Higher Secondary (+2 Science)</h3><p>State Board</p></div>
+      </div>
+      <div class="education-item">
+        <div class="edu-left">93%</div>
+        <div><h3>SSLC</h3><p>State Board</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="container">
+    <h2>Excel Practical Work</h2>
+    <div class="gallery">
+      <img src="images/EXCEL1.PNG">
+      <img src="images/EXCEL2.PNG">
+    </div>
+
+    <h2 style="margin-top:45px">Tally Practical Work</h2>
+    <div class="gallery">
+      <img src="images/tally1.JPG">
+      <img src="images/tally2.JPG">
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTATION -->
+<section id="presentation">
+  <div class="container">
+    <h2>Presentation</h2>
+    <div class="card">
+      <p>This is my PowerPoint presentation converted into video format.</p>
+      <video controls>
+        <source src="saina_presentation.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <div class="card contact-card">
+      <div class="contact-item"><span class="icon">📧</span><p>sainamn24@gmail.com</p></div>
+      <div class="contact-item"><span class="icon">📞</span><p>+91 6235486018</p></div>
+      <div class="contact-item"><span class="icon">📍</span><p>Perumbavoor, Kerala</p></div>
+      <div class="contact-social">
+        <a class="social whatsapp" href="https://wa.me/916235486018">WhatsApp</a>
+        <a class="social instagram" href="https://www.instagram.com/_sai_na__/">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p>© 2026 <span class="name-highlight">Saina M N</span> | Professional Portfolio</p>
+    
+  </div>
+</footer>
+
+
+</body>
+</html>
